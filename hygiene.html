@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hygiene Products - Origink</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css folders/hygiene.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Origink</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom" href="fruits.html">Fruits</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom" href="vegetables.html">Vegetables</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom" href="rice.html">Rice</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom" href="dals.html">Dals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom" href="oils.html">Oils</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom" href="masalas.html">Masalas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom" href="kitchenequipment.html">Kitchen Equipment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom" href="sauces.html">Sauces</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom" href="tableware.html">Tableware</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom" href="hygiene.html">Hygiene</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom" href="snacks.html">Snacks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom" href="cart.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span id="cart-badge">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+            <li class="breadcrumb-item active">Hygiene</li>
+        </ol>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <h2 class="text-center mb-4">Hygiene Products</h2>
+        <div class="row">
+            <!-- Hand Wash -->
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="../image folders/hand-wash.jpg" alt="Hand Wash" class="product-img">
+                    <div class="product-info">
+                        <h3>Hand Wash</h3>
+                        <p class="price">₹120.00/250ml</p>
+                        <div class="quantity-controls">
+                            <button onclick="decrementQuantity('HYG001')">-</button>
+                            <input type="number" id="HYG001" value="1" min="1" readonly>
+                            <button onclick="incrementQuantity('HYG001')">+</button>
+                        </div>
+                        <button class="btn btn-primary" onclick="addToCart('Hand Wash', 120.00, 'HYG001')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dish Soap -->
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="../image folders/dish-soap.jpg" alt="Dish Soap" class="product-img">
+                    <div class="product-info">
+                        <h3>Dish Soap</h3>
+                        <p class="price">₹90.00/500ml</p>
+                        <div class="quantity-controls">
+                            <button onclick="decrementQuantity('HYG002')">-</button>
+                            <input type="number" id="HYG002" value="1" min="1" readonly>
+                            <button onclick="incrementQuantity('HYG002')">+</button>
+                        </div>
+                        <button class="btn btn-primary" onclick="addToCart('Dish Soap', 90.00, 'HYG002')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Laundry Detergent -->
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="../image folders/laundry-detergent.jpg" alt="Laundry Detergent" class="product-img">
+                    <div class="product-info">
+                        <h3>Laundry Detergent</h3>
+                        <p class="price">₹250.00/1kg</p>
+                        <div class="quantity-controls">
+                            <button onclick="decrementQuantity('HYG003')">-</button>
+                            <input type="number" id="HYG003" value="1" min="1" readonly>
+                            <button onclick="incrementQuantity('HYG003')">+</button>
+                        </div>
+                        <button class="btn btn-primary" onclick="addToCart('Laundry Detergent', 250.00, 'HYG003')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Floor Cleaner -->
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="../image folders/floor-cleaner.jpg" alt="Floor Cleaner" class="product-img">
+                    <div class="product-info">
+                        <h3>Floor Cleaner</h3>
+                        <p class="price">₹180.00/1L</p>
+                        <div class="quantity-controls">
+                            <button onclick="decrementQuantity('HYG004')">-</button>
+                            <input type="number" id="HYG004" value="1" min="1" readonly>
+                            <button onclick="incrementQuantity('HYG004')">+</button>
+                        </div>
+                        <button class="btn btn-primary" onclick="addToCart('Floor Cleaner', 180.00, 'HYG004')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bathroom Cleaner -->
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="../image folders/bathroom-cleaner.jpg" alt="Bathroom Cleaner" class="product-img">
+                    <div class="product-info">
+                        <h3>Bathroom Cleaner</h3>
+                        <p class="price">₹150.00/500ml</p>
+                        <div class="quantity-controls">
+                            <button onclick="decrementQuantity('HYG005')">-</button>
+                            <input type="number" id="HYG005" value="1" min="1" readonly>
+                            <button onclick="incrementQuantity('HYG005')">+</button>
+                        </div>
+                        <button class="btn btn-primary" onclick="addToCart('Bathroom Cleaner', 150.00, 'HYG005')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Glass Cleaner -->
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="../image folders/glass-cleaner.jpg" alt="Glass Cleaner" class="product-img">
+                    <div class="product-info">
+                        <h3>Glass Cleaner</h3>
+                        <p class="price">₹130.00/500ml</p>
+                        <div class="quantity-controls">
+                            <button onclick="decrementQuantity('HYG006')">-</button>
+                            <input type="number" id="HYG006" value="1" min="1" readonly>
+                            <button onclick="incrementQuantity('HYG006')">+</button>
+                        </div>
+                        <button class="btn btn-primary" onclick="addToCart('Glass Cleaner', 130.00, 'HYG006')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About Origink</h5>
+                    <p>Your one-stop shop for all grocery needs. Quality products at affordable prices.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="fruits.html">Fruits</a></li>
+                        <li><a href="vegetables.html">Vegetables</a></li>
+                        <li><a href="rice.html">Rice</a></li>
+                        <li><a href="dals.html">Dals</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Connect With Us</h5>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function incrementQuantity(id) {
+            const input = document.getElementById(id);
+            input.value = parseInt(input.value) + 1;
+        }
+
+        function decrementQuantity(id) {
+            const input = document.getElementById(id);
+            if (parseInt(input.value) > 1) {
+                input.value = parseInt(input.value) - 1;
+            }
+        }
+
+        function addToCart(name, price, id) {
+            const quantity = document.getElementById(id).value;
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name, price, quantity });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            
+            // Update cart badge
+            const badge = document.getElementById('cart-badge');
+            badge.textContent = cart.length;
+            
+            alert('Added to cart!');
+        }
+    </script>
+</body>
+</html> 

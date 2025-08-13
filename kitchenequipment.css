@@ -1,0 +1,206 @@
+/* Replicated from fruits.css for kitchen equipment */
+@import url('fruits.css'); 
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000;
+    color: #F8F1E5;
+}
+
+/* Navigation Styles */
+.navbar {
+    padding: 1rem 0;
+    background-color: #bc1823 !important;
+}
+
+.nav-custom {
+    color: #F8F1E5 !important;
+    font-weight: 500;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.nav-custom:hover {
+    color: #ff69b4 !important;
+}
+
+/* Product Card Styles */
+.product-card {
+    background: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border: 1px solid #bc1823;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.3);
+    border-color: #ff69b4;
+}
+
+.product-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #bc1823;
+}
+
+.product-info {
+    padding: 1rem;
+}
+
+.product-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #F8F1E5;
+}
+
+.price {
+    font-size: 1.1rem;
+    color: #bc1823;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Quantity Controls */
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 0.5rem;
+}
+
+.quantity-controls input {
+    width: 60px;
+    text-align: center;
+    border: 1px solid #bc1823;
+    border-radius: 4px;
+    padding: 0.25rem;
+    background-color: #1a1a1a;
+    color: #000;
+}
+
+.quantity-controls button {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background-color: #bc1823;
+    color: #F8F1E5;
+    border: none;
+}
+
+.quantity-controls button:hover {
+    background-color: #ff69b4;
+}
+
+/* Add to Cart Button */
+.btn-primary {
+    background-color: #bc1823;
+    border-color: #bc1823;
+    width: 100%;
+    padding: 0.5rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #ff69b4;
+    border-color: #ff69b4;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #bc1823;
+    color: #F8F1E5;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: #F8F1E5;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ff69b4;
+    text-decoration: underline;
+}
+
+.social-links a {
+    font-size: 1.5rem;
+    transition: opacity 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ff69b4;
+    opacity: 0.8;
+}
+
+/* Breadcrumb Styles */
+.breadcrumb {
+    background-color: #bc1823;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0;
+}
+
+.breadcrumb-item a {
+    color: #F8F1E5;
+    text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+    color: #ff69b4;
+}
+
+.breadcrumb-item.active {
+    color: #F8F1E5;
+}
+
+/* Cart Badge */
+#cart-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #bc1823;
+    color: #F8F1E5;
+    border-radius: 50%;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .product-card {
+        margin-bottom: 1rem;
+    }
+    
+    .product-img {
+        height: 180px;
+    }
+    
+    .product-info h3 {
+        font-size: 1.1rem;
+    }
+    
+    .price {
+        font-size: 1rem;
+    }
+} 

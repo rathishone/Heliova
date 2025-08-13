@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HELIOVA - Tableware</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css folders/tableware.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #bc1823; color: #F8F1E5;">
+        <div class="container">
+            <a class="navbar-brand" href="home.html">
+                <img src="../image folders/heliova.png" alt="HELIOVA" style="width: 100px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom" href="features.html">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom" href="ordernow.html">Order Now</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom" href="hedge.html">Hedging</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom" href="membership.html">Membership</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom" href="cart.html">
+                            <i class="bi bi-cart3" style="font-size: 1.5rem;"></i>
+                            <span class="badge badge-light" id="cart-badge">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom" href="profile.html">
+                            <i class="bi bi-person-circle" style="font-size: 1.5rem;"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb" style="background-color:#bc1823; margin-bottom: 0; border-radius: 0; color: #F8F1E5;">
+            <li class="breadcrumb-item"><a href="ordernow.html" style="color: #F8F1E5;">Order Now</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Tableware</li>
+        </ol>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container py-5">
+        <h1 class="text-center mb-5">Tableware</h1>
+        
+        <div class="row">
+            <!-- Dinner Plate Set -->
+            <div class="col-md-3 mb-4">
+                <div class="product-card">
+                    <img src="../image folders/dinner-plate-set.jpg" alt="Dinner Plate Set" class="product-img">
+                    <div class="product-info">
+                        <h3>Dinner Plate Set</h3>
+                        <p class="price">₹1,500.00/set</p>
+                        <div class="quantity-controls">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity('TAB001')">-</button>
+                            <input type="number" id="TAB001" class="form-control text-center" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity('TAB001')">+</button>
+                        </div>
+                        <button class="btn btn-primary" onclick="addToCart('TAB001', 'Dinner Plate Set', 1500.00, 'Tableware', '../image folders/dinner-plate-set.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cutlery Set -->
+            <div class="col-md-3 mb-4">
+                <div class="product-card">
+                    <img src="../image folders/cutlery-set.jpg" alt="Cutlery Set" class="product-img">
+                    <div class="product-info">
+                        <h3>Cutlery Set</h3>
+                        <p class="price">₹2,200.00/set</p>
+                        <div class="quantity-controls">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity('TAB002')">-</button>
+                            <input type="number" id="TAB002" class="form-control text-center" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity('TAB002')">+</button>
+                        </div>
+                        <button class="btn btn-primary" onclick="addToCart('TAB002', 'Cutlery Set', 2200.00, 'Tableware', '../image folders/cutlery-set.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Glass Set -->
+            <div class="col-md-3 mb-4">
+                <div class="product-card">
+                    <img src="../image folders/glass-set.jpg" alt="Glass Set" class="product-img">
+                    <div class="product-info">
+                        <h3>Glass Set</h3>
+                        <p class="price">₹800.00/set</p>
+                        <div class="quantity-controls">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity('TAB003')">-</button>
+                            <input type="number" id="TAB003" class="form-control text-center" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity('TAB003')">+</button>
+                        </div>
+                        <button class="btn btn-primary" onclick="addToCart('TAB003', 'Glass Set', 800.00, 'Tableware', '../image folders/glass-set.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bowl Set -->
+            <div class="col-md-3 mb-4">
+                <div class="product-card">
+                    <img src="../image folders/bowl-set.jpg" alt="Bowl Set" class="product-img">
+                    <div class="product-info">
+                        <h3>Bowl Set</h3>
+                        <p class="price">₹1,200.00/set</p>
+                        <div class="quantity-controls">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity('TAB004')">-</button>
+                            <input type="number" id="TAB004" class="form-control text-center" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity('TAB004')">+</button>
+                        </div>
+                        <button class="btn btn-primary" onclick="addToCart('TAB004', 'Bowl Set', 1200.00, 'Tableware', '../image folders/bowl-set.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Serving Platter -->
+            <div class="col-md-3 mb-4">
+                <div class="product-card">
+                    <img src="../image folders/serving-platter.jpg" alt="Serving Platter" class="product-img">
+                    <div class="product-info">
+                        <h3>Serving Platter</h3>
+                        <p class="price">₹1,800.00</p>
+                        <div class="quantity-controls">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity('TAB005')">-</button>
+                            <input type="number" id="TAB005" class="form-control text-center" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity('TAB005')">+</button>
+                        </div>
+                        <button class="btn btn-primary" onclick="addToCart('TAB005', 'Serving Platter', 1800.00, 'Tableware', '../image folders/serving-platter.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Table Runner -->
+            <div class="col-md-3 mb-4">
+                <div class="product-card">
+                    <img src="../image folders/table-runner.jpg" alt="Table Runner" class="product-img">
+                    <div class="product-info">
+                        <h3>Table Runner</h3>
+                        <p class="price">₹600.00</p>
+                        <div class="quantity-controls">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity('TAB006')">-</button>
+                            <input type="number" id="TAB006" class="form-control text-center" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity('TAB006')">+</button>
+                        </div>
+                        <button class="btn btn-primary" onclick="addToCart('TAB006', 'Table Runner', 600.00, 'Tableware', '../image folders/table-runner.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-left py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>About HELIOVA</h4>
+                    <p>We deliver fresh, quality food to your doorstep. Our mission is to provide healthy and nutritious food options for everyone.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="ordernow.html">Order Now</a></li>
+                        <li><a href="hedge.html">Hedging</a></li>
+                        <li><a href="membership.html">Membership</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Connect With Us</h4>
+                    <div class="social-links">
+                        <a href="https://instagram.com" target="_blank" class="text-light mx-2" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="https://facebook.com" target="_blank" class="text-light mx-2" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="https://twitter.com" target="_blank" class="text-light mx-2" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                    </div>
+                    <p class="mt-3">&copy; 2025 HELIOVA. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js folders/common.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function incrementQuantity(productId) {
+            const input = document.getElementById(productId);
+            input.value = parseInt(input.value) + 1;
+        }
+
+        function decrementQuantity(productId) {
+            const input = document.getElementById(productId);
+            if (parseInt(input.value) > 1) {
+                input.value = parseInt(input.value) - 1;
+            }
+        }
+    </script>
+</body>
+</html> 

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hedge Cart - HELIOVA</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css folders/cart.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #bc1823; color: #F8F1E5;">
+        <div class="container">
+            <a class="navbar-brand" href="home.html">
+                <img src="../image folders/heliova.png" alt="HELIOVA" style="width: 100px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom" href="features.html">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom" href="ordernow.html">Order Now</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom" href="hedge.html">Hedging</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom" href="membership.html">Membership</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom" href="cart.html">
+                            <i class="bi bi-cart3" style="font-size: 1.5rem;"></i>
+                            <span class="badge badge-light" id="cart-badge">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom" href="profile.html">
+                            <i class="bi bi-person-circle" style="font-size: 1.5rem;"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="home.html" class="nav-custom">Home</a></li>
+            <li class="breadcrumb-item"><a href="hedgenow.html" class="nav-custom">Hedge Now</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Hedge Cart</li>
+        </ol>
+    </nav>
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <h1 class="cart-title">Your Hedge Cart</h1>
+            <!-- Hedge Cart Items Table -->
+            <div class="cart-items">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Vegetable</th>
+                            <th>Requested (kg)</th>
+                            <th>Fixed Price (₹/kg)</th>
+                            <th>Proposed Price (₹/kg)</th>
+                            <th>Total (₹)</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="hedge-cart-items-body">
+                        <!-- Hedge cart items will be dynamically added here -->
+                    </tbody>
+                </table>
+            </div>
+            <!-- Cart Summary -->
+            <div class="cart-summary">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="summary-card">
+                            <h3>Hedge Summary</h3>
+                            <div class="summary-item">
+                                <span>Total Kgs:</span>
+                                <span id="total-kgs">0</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Subtotal:</span>
+                                <span id="hedge-subtotal">₹0.00</span>
+                            </div>
+                            <div class="summary-item" id="platform-fee-row">
+                                <span>Platform Fee:</span>
+                                <span id="platform-fee">₹0.00</span>
+                            </div>
+                            <div class="summary-item" id="shipping-row">
+                                <span>Shipping:</span>
+                                <span id="hedge-shipping">₹0.00</span>
+                            </div>
+                            <div class="summary-item" id="discount-row">
+                                <span>Discount:</span>
+                                <span id="hedge-discount">₹0.00</span>
+                            </div>
+                            <div class="summary-item total">
+                                <span>Total:</span>
+                                <span id="hedge-total">₹0.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="checkout-form">
+                            <h3>Business Owner Details</h3>
+                            <form id="hedge-checkout-form">
+                                <div class="form-group">
+                                    <label for="owner-name">Name</label>
+                                    <input type="text" class="form-control" id="owner-name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="owner-phone">Phone Number</label>
+                                    <input type="tel" class="form-control" id="owner-phone" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="owner-address">Address</label>
+                                    <textarea class="form-control" id="owner-address" rows="2" required></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="membership-id">Membership ID</label>
+                                    <input type="text" class="form-control" id="membership-id" required>
+                                    <button type="button" class="btn btn-info mt-2" onclick="verifyMembership()">Verify Membership</button>
+                                    <div id="membership-status" class="mt-2"></div>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block" id="submit-hedge-btn" disabled>Submit Hedge Request</button>
+                            </form>
+                            <div id="membership-benefits" class="mt-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>About HELIOVA</h4>
+                    <p>We deliver fresh, quality food to your doorstep. Our mission is to provide healthy and nutritious food options for everyone.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="ordernow.html">Order Now</a></li>
+                        <li><a href="hedge.html">Hedging</a></li>
+                        <li><a href="membership.html">Membership</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Connect With Us</h4>
+                    <div class="social-links">
+                        <a href="https://instagram.com" target="_blank" class="text-light mx-2" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="https://facebook.com" target="_blank" class="text-light mx-2" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="https://twitter.com" target="_blank" class="text-light mx-2" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                    </div>
+                    <p class="mt-3">&copy; 2025 HELIOVA. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Membership tiers for demo
+        const membershipTiers = {
+            'RADIANCE': {name: 'Heliova Radiance', discount: 0.15, shipping: 0, platform: 0, desc: 'Free shipping, no platform fee, 15% discount.'},
+            'GLOW': {name: 'Heliova Glow', discount: 0.10, shipping: 0, platform: 0, desc: 'No platform fee, 10% discount.'},
+            'SPARK': {name: 'Heliova Spark', discount: 0, shipping: 0, platform: 0, desc: 'No platform fee.'}
+        };
+        let verifiedTier = null;
+        function verifyMembership() {
+            const id = document.getElementById('membership-id').value.trim().toUpperCase();
+            let status = document.getElementById('membership-status');
+            let benefits = document.getElementById('membership-benefits');
+            if (id.startsWith('RAD')) {
+                verifiedTier = 'RADIANCE';
+            } else if (id.startsWith('GLO')) {
+                verifiedTier = 'GLOW';
+            } else if (id.startsWith('SPA')) {
+                verifiedTier = 'SPARK';
+            } else {
+                verifiedTier = null;
+            }
+            if (verifiedTier) {
+                status.innerHTML = `<span class='text-success'>Verified: ${membershipTiers[verifiedTier].name}</span>`;
+                benefits.innerHTML = `<div class='alert alert-info'>${membershipTiers[verifiedTier].desc}</div>`;
+                document.getElementById('submit-hedge-btn').disabled = false;
+            } else {
+                status.innerHTML = `<span class='text-danger'>Invalid Membership ID. Only verified members can access the hedge feature.</span>`;
+                benefits.innerHTML = '';
+                document.getElementById('submit-hedge-btn').disabled = true;
+            }
+            updateHedgeSummary();
+        }
+        // Hedge Cart Logic
+        let hedgeCart = JSON.parse(localStorage.getItem('hedgeCart')) || [];
+        function updateHedgeCartDisplay() {
+            const body = document.getElementById('hedge-cart-items-body');
+            body.innerHTML = '';
+            let totalKgs = 0, subtotal = 0;
+            hedgeCart.forEach((item, idx) => {
+                const price = item.proposed && item.proposed > 0 ? item.proposed : item.fixedPrice;
+                const total = price * item.qty;
+                totalKgs += item.qty;
+                subtotal += total;
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${item.name}</td>
+                    <td>
+                        <input type='number' min='1' value='${item.qty}' class='form-control' style='width:80px;display:inline-block;' onchange='editHedgeQty(${idx}, this.value)'>
+                    </td>
+                    <td>₹${item.fixedPrice.toFixed(2)}</td>
+                    <td>
+                        <input type='number' min='0' step='0.01' value='${item.proposed ? item.proposed : ''}' class='form-control' style='width:100px;display:inline-block;' onchange='editHedgeProposed(${idx}, this.value)'>
+                    </td>
+                    <td>₹${total.toFixed(2)}</td>
+                    <td><button class='btn btn-danger btn-sm' onclick='removeHedgeItem(${idx})'><i class='bi bi-trash'></i></button></td>
+                `;
+                body.appendChild(row);
+            });
+            document.getElementById('total-kgs').textContent = totalKgs;
+            document.getElementById('hedge-subtotal').textContent = `₹${subtotal.toFixed(2)}`;
+            updateHedgeSummary();
+        }
+        function editHedgeQty(idx, val) {
+            val = parseInt(val);
+            if (val > 0) {
+                hedgeCart[idx].qty = val;
+                localStorage.setItem('hedgeCart', JSON.stringify(hedgeCart));
+                updateHedgeCartDisplay();
+            }
+        }
+        function editHedgeProposed(idx, val) {
+            val = parseFloat(val);
+            hedgeCart[idx].proposed = val > 0 ? val : null;
+            localStorage.setItem('hedgeCart', JSON.stringify(hedgeCart));
+            updateHedgeCartDisplay();
+        }
+        function removeHedgeItem(idx) {
+            hedgeCart.splice(idx, 1);
+            localStorage.setItem('hedgeCart', JSON.stringify(hedgeCart));
+            updateHedgeCartDisplay();
+        }
+        function updateHedgeSummary() {
+            let subtotal = 0, totalKgs = 0;
+            let platformFee = 0, shipping = 0, discount = 0;
+            hedgeCart.forEach(item => {
+                const price = item.proposed && item.proposed > 0 ? item.proposed : item.fixedPrice;
+                subtotal += price * item.qty;
+                totalKgs += item.qty;
+            });
+            // Membership benefits
+            if (verifiedTier === 'RADIANCE') {
+                platformFee = 0;
+                shipping = 0;
+                discount = subtotal * 0.15;
+            } else if (verifiedTier === 'GLOW') {
+                platformFee = 0;
+                shipping = 0;
+                discount = subtotal * 0.10;
+            } else if (verifiedTier === 'SPARK') {
+                platformFee = 0;
+                shipping = 0;
+                discount = 0;
+            } else {
+                platformFee = subtotal * 0.05;
+                shipping = 50;
+                discount = 0;
+            }
+            document.getElementById('platform-fee').textContent = `₹${platformFee.toFixed(2)}`;
+            document.getElementById('hedge-shipping').textContent = `₹${shipping.toFixed(2)}`;
+            document.getElementById('hedge-discount').textContent = `₹${discount.toFixed(2)}`;
+            document.getElementById('hedge-total').textContent = `₹${(subtotal + platformFee + shipping - discount).toFixed(2)}`;
+            // Hide/show rows
+            document.getElementById('platform-fee-row').style.display = platformFee > 0 ? '' : 'none';
+            document.getElementById('shipping-row').style.display = shipping > 0 ? '' : 'none';
+            document.getElementById('discount-row').style.display = discount > 0 ? '' : 'none';
+        }
+        // Form submission
+        document.getElementById('hedge-checkout-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            if (!verifiedTier) {
+                alert('Please verify your membership to submit a hedge request.');
+                return;
+            }
+            alert('Hedge request submitted successfully!');
+            hedgeCart = [];
+            localStorage.setItem('hedgeCart', JSON.stringify(hedgeCart));
+            updateHedgeCartDisplay();
+            this.reset();
+            document.getElementById('membership-status').innerHTML = '';
+            document.getElementById('membership-benefits').innerHTML = '';
+            document.getElementById('submit-hedge-btn').disabled = true;
+        });
+        // Cart badge update
+        function updateCartBadge() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            document.getElementById('cart-badge').textContent = totalItems;
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            updateHedgeCartDisplay();
+            updateCartBadge();
+        });
+    </script>
+</body>
+</html> 

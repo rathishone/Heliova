@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px ;
+    background-color: #bc1823;
+}
+
+.super-saver button {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.location select {
+    padding: 5px;
+}
+
+.search-bar input {
+    width: 200px;
+    padding: 5px;
+}
+
+.user-actions button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #6c63ff;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Main Content Styles */
+.navbar {
+    background-color: black;
+    color: ivory;
+    padding: 10px 20px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li a {
+    text-decoration: none; /* Remove underline */
+    color: ivory; /* Normal state */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: hotpink; /* Hover state */
+    text-decoration: none; /* Ensure underline doesn't appear on hover */
+}
+/* Footer Styles */
+.breadcrumb {
+    background-color: #bc1823;
+    color: #F8F1E5;
+}
+
+.breadcrumb a {
+    color: #F8F1E5;
+    text-decoration: none; /* No underline */
+}
+
+footer {
+    background-color: #bc1823;
+    color: #F8F1E5;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+}
+
+footer a {
+    padding: 10px;
+    display: inline-block;
+}
+
+footer .bi {
+    font-size: 1.5rem;
+    vertical-align: middle;
+}
+
+footer .bi:hover {
+    color: #FF69B4;
+}

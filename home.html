@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HELIOVA - B2B commerce platform</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css folders/home.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Ensure footer stays at the bottom */
+        footer {
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            background-color: #bc1823;
+            color: #F8F1E5;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #bc1823; color: #F8F1E5;">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="../image folders/heliova.png" alt="HELIOVA" style="width: 100px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom" href="features.html">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom" href="ordernow.html">Order Now</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom" href="hedge.html">Hedging</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom" href="membership.html">Membership</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom" href="cart.html">
+                            <i class="bi bi-cart3" style="font-size: 1.5rem;"></i>
+                            <span class="badge badge-light" id="cart-badge">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom" href="profile.html">
+                            <i class="bi bi-person-circle" style="font-size: 1.5rem;"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb" style="background-color:#bc1823; margin-bottom: 0; border-radius: 0; color: #F8F1E5;">
+            <li class="breadcrumb-item active" aria-current="page">Home</li>
+        </ol>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1 class="glitch" data-text="Fresh Food Delivery">Fresh Delivery</h1>
+                    <p class="subtitle">Get fresh, quality produce delivered to your doorstep</p>
+                    <button class="cta-button" onclick="location.href='ordernow.html'">Order Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers -->
+    <section class="special-offers">
+        <div class="container">
+            <h2 class="section-title">Special Offers</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="offer-card">
+                        <img src="../image folders/Order Now.png" alt="Order Now" class="offer-img">
+                        <div class="offer-content">
+                            <h3>Fresh Food Delivery</h3>
+                            <p>Get 20% off on your first order</p>
+                            <a href="ordernow.html" class="offer-button">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="offer-card">
+                        <img src="../image folders/hedge.png" alt="Customize Menu" class="offer-img">
+                        <div class="offer-content">
+                            <h3>HEDGE ON YOUR FARM FRESH NEEDS</h3>
+                            <p>PRE-ORDER ON WHAT YOU NEED BY HEDGING</p>
+                            <a href="hedge.html" class="offer-button">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline">
+        <div class="container">
+            <h2 class="section-title">About Us: Delivering Freshness, Ensuring Sustainability</h2>
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="bi bi-flower1"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Step 1: Partnering with Farmers</h3>
+                        <p>At Heliova, we begin by signing land rights agreements with farmers, ensuring their income stability month after month. This guarantees sustainable livelihoods for them while securing a consistent supply chain for us.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="bi bi-arrow-left-right"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Step 2: Connecting Farmers and Restaurants</h3>
+                        <p>Our platform empowers farmers and restaurants to enter into mutually beneficial contracts. Restaurants gain access to reliable, high-quality produce, while farmers are guaranteed a fair Minimum Support Price (MSP) for their crops—creating an ecosystem of trust and transparency.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="bi bi-box-seam"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Step 3: Collecting and Preserving Supplies</h3>
+                        <p>Every day, we collect fresh supplies directly from our partner farmers. These are stored and transported through our extensive cold supply chain network, maintaining optimal freshness and quality.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="bi bi-truck"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Step 4: Timely Delivery</h3>
+                        <p>With precision planning and cutting-edge logistics, the goods are delivered to you exactly when you need them—whether you're a household or a restaurant. On-time, every time, we strive to bring you the best from farm to table.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-footer">
+                <p>This timeline showcases our commitment to farmers, restaurants, and customers alike, building a sustainable and efficient system that benefits all parties involved. 🌱🚛</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-left py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>About HELIOVA</h4>
+                    <p>We deliver fresh, quality food to your doorstep. Our mission is to provide healthy and nutritious food options for everyone.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="ordernow.html">Order Now</a></li>
+                        <li><a href="hedge.html">Hedging</a></li>
+                        <li><a href="membership.html">Membership</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Connect With Us</h4>
+                    <div class="social-links">
+                        <a href="https://instagram.com" target="_blank" class="text-light mx-2" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="https://facebook.com" target="_blank" class="text-light mx-2" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="https://twitter.com" target="_blank" class="text-light mx-2" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                    </div>
+                    <p class="mt-3">&copy; 2025 HELIOVA. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js folders/common.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Update cart badge count
+        function updateCartBadge() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            document.getElementById('cart-badge').textContent = totalItems;
+        }
+        updateCartBadge();
+    </script>
+</body>
+</html>

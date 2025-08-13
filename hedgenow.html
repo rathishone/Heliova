@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Pricing - HELIOVA</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css folders/hedgenow.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #000;
+            color: #fff;
+        }
+        .week-selector {
+            background: #111;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border: 2px solid #bc1823;
+        }
+        .price-info {
+            background: #1a1a1a;
+            border: 1px solid #bc1823;
+            color: #fff;
+        }
+        .price-info h5 {
+            color: #bc1823;
+        }
+        .price-info ul li {
+            color: #fff;
+        }
+        .daily-quantities {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .daily-quantity {
+            text-align: center;
+        }
+        .daily-quantity label {
+            font-size: 0.9rem;
+            color: #ff2d75;
+        }
+        .total-weekly {
+            font-weight: bold;
+            color: #ff2d75;
+        }
+        .section-title {
+            color: #bc1823;
+            border-bottom: 3px solid #ff2d75;
+            display: inline-block;
+            padding-bottom: 0.25em;
+        }
+        .table {
+            background: #111;
+            color: #fff;
+        }
+        .table th {
+            background: #bc1823;
+            color: #fff;
+            border: none;
+        }
+        .table td {
+            background: #111;
+            color: #fff;
+            border-top: 1px solid #bc1823;
+        }
+        .form-control {
+            background: #000;
+            color: #fff;
+            border: 1.5px solid #bc1823;
+        }
+        .form-control:focus {
+            border-color: #ff2d75;
+            box-shadow: 0 0 0 0.2rem rgba(255,45,117,0.25);
+        }
+        .btn-primary {
+            background: #bc1823;
+            border: none;
+            color: #fff;
+            transition: background 0.2s;
+        }
+        .btn-primary:hover, .btn-primary:focus {
+            background: #ff2d75;
+            color: #fff;
+        }
+        .btn-success {
+            background: #ff2d75;
+            border: none;
+            color: #fff;
+        }
+        .btn-success:hover, .btn-success:focus {
+            background: #bc1823;
+            color: #fff;
+        }
+        .breadcrumb {
+            background: #111;
+            color: #fff;
+        }
+        .breadcrumb a {
+            color: #ff2d75;
+        }
+        .breadcrumb .active {
+            color: #bc1823;
+        }
+        .navbar, .footer {
+            background: #bc1823 !important;
+        }
+        .navbar .nav-link, .footer a {
+            transition: color 0.2s;
+        }
+        .navbar .nav-link:hover, .footer a:hover {
+            color: #ff2d75 !important;
+        }
+        .navbar-brand img {
+            filter: drop-shadow(0 0 2px #000) brightness(0) invert(1);
+        }
+        .footer h4 {
+            color: #bc1823;
+        }
+        .footer-links li a {
+            color: #fff;
+        }
+        .footer-links li a:hover {
+            color: #ff2d75;
+        }
+        .social-links a {
+            color: #ff2d75;
+        }
+        .social-links a:hover {
+            color: #bc1823;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #bc1823; color: #F8F1E5;">
+        <div class="container">
+            <a class="navbar-brand" href="home.html">
+                <img src="../image folders/heliova.png" alt="HELIOVA" style="width: 100px;">
+            </span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom" href="features.html">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom" href="ordernow.html">Order Now</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom" href="hedge.html">Hedging</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom" href="membership.html">Membership</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom" href="profile.html">
+                            <i class="bi bi-person-circle" style="font-size: 1.5rem;"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb" style="background-color:#bc1823; margin-bottom: 0; border-radius: 0; color: #F8F1E5;">
+            <li class="breadcrumb-item"><a href="home.html" class="nav-custom" style="color: #F8F1E5;">Home</a></li>
+            <li class="breadcrumb-item"><a href="ordernow.html" class="nav-custom" style="color: #F8F1E5;">Order Now</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Fresh Pricing</li>
+        </ol>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Hedge Your Weekly Vegetable Needs</h1>
+                <p>Request quantities for the week and propose your price. All requests are at a fixed base price, but you can bargain for a better deal!</p>
+                
+                <!-- Week Selection -->
+                <div class="week-selector">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="weekStart"><b>Select Week Starting Date</b></label>
+                                <input type="date" class="form-control" id="weekStart" onchange="updateWeekDates()">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="regionSelect"><b>Select Region</b></label>
+                                <select class="form-control" id="regionSelect" onchange="updateRegionPrices()">
+                                    <option value="bangalore">Bangalore</option>
+                                    <option value="chennai">Chennai</option>
+                                    <option value="coimbatore">Coimbatore</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-info">
+                        <h5>Important Information:</h5>
+                        <ul>
+                            <li>This is a prepaid model - you will be charged at the fixed price initially</li>
+                            <li>If your proposed price is accepted, the difference will be credited back to your account</li>
+                            <li>If your proposed price is rejected, the fixed price will be charged</li>
+                            <li>You can set different quantities for each day of the week</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hedge Request Section -->
+        <section class="hedge-request-section">
+            <div class="container">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="section-title">Vegetables Hedge Request</h2>
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Vegetable</th>
+                                        <th>Fixed Price (₹/kg)</th>
+                                        <th>Daily Quantities (kg)</th>
+                                        <th>Weekly Total</th>
+                                        <th>Propose Price (₹/kg)</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Onions</td>
+                                        <td id="onions-price">45.00</td>
+                                        <td>
+                                            <div class="daily-quantities">
+                                                <div class="daily-quantity">
+                                                    <label>Mon</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="onions-mon">
+                                                </div>
+                                                <div class="daily-quantity">
+                                                    <label>Tue</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="onions-tue">
+                                                </div>
+                                                <div class="daily-quantity">
+                                                    <label>Wed</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="onions-wed">
+                                                </div>
+                                                <div class="daily-quantity">
+                                                    <label>Thu</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="onions-thu">
+                                                </div>
+                                                <div class="daily-quantity">
+                                                    <label>Fri</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="onions-fri">
+                                                </div>
+                                                <div class="daily-quantity">
+                                                    <label>Sat</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="onions-sat">
+                                                </div>
+                                                <div class="daily-quantity">
+                                                    <label>Sun</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="onions-sun">
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="total-weekly" id="onions-total">0</span> kg</td>
+                                        <td><input type="number" class="form-control" min="0" step="0.01" placeholder="Optional" id="onions-propose"></td>
+                                        <td><button class="btn btn-primary" onclick="addToHedgeCart('Onions', getCurrentPrice('onions-price'), 'onions', 'onions-propose')">Add to Hedge Cart</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tomatoes</td>
+                                        <td id="tomatoes-price">35.00</td>
+                                        <td>
+                                            <div class="daily-quantities">
+                                                <div class="daily-quantity">
+                                                    <label>Mon</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="tomatoes-mon">
+                                                </div>
+                                                <div class="daily-quantity">
+                                                    <label>Tue</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="tomatoes-tue">
+                                                </div>
+                                                <div class="daily-quantity">
+                                                    <label>Wed</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="tomatoes-wed">
+                                                </div>
+                                                <div class="daily-quantity">
+                                                    <label>Thu</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="tomatoes-thu">
+                                                </div>
+                                                <div class="daily-quantity">
+                                                    <label>Fri</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="tomatoes-fri">
+                                                </div>
+                                                <div class="daily-quantity">
+                                                    <label>Sat</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="tomatoes-sat">
+                                                </div>
+                                                <div class="daily-quantity">
+                                                    <label>Sun</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="tomatoes-sun">
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="total-weekly" id="tomatoes-total">0</span> kg</td>
+                                        <td><input type="number" class="form-control" min="0" step="0.01" placeholder="Optional" id="tomatoes-propose"></td>
+                                        <td><button class="btn btn-primary" onclick="addToHedgeCart('Tomatoes', getCurrentPrice('tomatoes-price'), 'tomatoes', 'tomatoes-propose')">Add to Hedge Cart</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Potatoes</td>
+                                        <td id="potatoes-price">30.00</td>
+                                        <td>
+                                            <div class="daily-quantities">
+                                                <div class="daily-quantity">
+                                                    <label>Mon</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="potatoes-mon">
+                                                </div>
+                                                <div class="daily-quantity">
+                                                    <label>Tue</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="potatoes-tue">
+                                                </div>
+                                                <div class="daily-quantity">
+                                                    <label>Wed</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="potatoes-wed">
+                                                </div>
+                                                <div class="daily-quantity">
+                                                    <label>Thu</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="potatoes-thu">
+                                                </div>
+                                                <div class="daily-quantity">
+                                                    <label>Fri</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="potatoes-fri">
+                                                </div>
+                                                <div class="daily-quantity">
+                                                    <label>Sat</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="potatoes-sat">
+                                                </div>
+                                                <div class="daily-quantity">
+                                                    <label>Sun</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="potatoes-sun">
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="total-weekly" id="potatoes-total">0</span> kg</td>
+                                        <td><input type="number" class="form-control" min="0" step="0.01" placeholder="Optional" id="potatoes-propose"></td>
+                                        <td><button class="btn btn-primary" onclick="addToHedgeCart('Potatoes', getCurrentPrice('potatoes-price'), 'potatoes', 'potatoes-propose')">Add to Hedge Cart</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Capsicum</td>
+                                        <td id="capsicum-price">70.00</td>
+                                        <td>
+                                            <div class="daily-quantities">
+                                                <div class="daily-quantity">
+                                                    <label>Mon</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="capsicum-mon">
+                                                </div>
+                                                <div class="daily-quantity">
+                                                    <label>Tue</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="capsicum-tue">
+                                                </div>
+                                                <div class="daily-quantity">
+                                                    <label>Wed</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="capsicum-wed">
+                                                </div>
+                                                <div class="daily-quantity">
+                                                    <label>Thu</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="capsicum-thu">
+                                                </div>
+                                                <div class="daily-quantity">
+                                                    <label>Fri</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="capsicum-fri">
+                                                </div>
+                                                <div class="daily-quantity">
+                                                    <label>Sat</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="capsicum-sat">
+                                                </div>
+                                                <div class="daily-quantity">
+                                                    <label>Sun</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="capsicum-sun">
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="total-weekly" id="capsicum-total">0</span> kg</td>
+                                        <td><input type="number" class="form-control" min="0" step="0.01" placeholder="Optional" id="capsicum-propose"></td>
+                                        <td><button class="btn btn-primary" onclick="addToHedgeCart('Capsicum', getCurrentPrice('capsicum-price'), 'capsicum', 'capsicum-propose')">Add to Hedge Cart</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Corn</td>
+                                        <td id="corn-price">55.00</td>
+                                        <td>
+                                            <div class="daily-quantities">
+                                                <div class="daily-quantity">
+                                                    <label>Mon</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="corn-mon">
+                                                </div>
+                                                <div class="daily-quantity">
+                                                    <label>Tue</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="corn-tue">
+                                                </div>
+                                                <div class="daily-quantity">
+                                                    <label>Wed</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="corn-wed">
+                                                </div>
+                                                <div class="daily-quantity">
+                                                    <label>Thu</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="corn-thu">
+                                                </div>
+                                                <div class="daily-quantity">
+                                                    <label>Fri</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="corn-fri">
+                                                </div>
+                                                <div class="daily-quantity">
+                                                    <label>Sat</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="corn-sat">
+                                                </div>
+                                                <div class="daily-quantity">
+                                                    <label>Sun</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="corn-sun">
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="total-weekly" id="corn-total">0</span> kg</td>
+                                        <td><input type="number" class="form-control" min="0" step="0.01" placeholder="Optional" id="corn-propose"></td>
+                                        <td><button class="btn btn-primary" onclick="addToHedgeCart('Corn', getCurrentPrice('corn-price'), 'corn', 'corn-propose')">Add to Hedge Cart</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cucumber</td>
+                                        <td id="cucumber-price">40.00</td>
+                                        <td>
+                                            <div class="daily-quantities">
+                                                <div class="daily-quantity">
+                                                    <label>Mon</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="cucumber-mon">
+                                                </div>
+                                                <div class="daily-quantity">
+                                                    <label>Tue</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="cucumber-tue">
+                                                </div>
+                                                <div class="daily-quantity">
+                                                    <label>Wed</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="cucumber-wed">
+                                                </div>
+                                                <div class="daily-quantity">
+                                                    <label>Thu</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="cucumber-thu">
+                                                </div>
+                                                <div class="daily-quantity">
+                                                    <label>Fri</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="cucumber-fri">
+                                                </div>
+                                                <div class="daily-quantity">
+                                                    <label>Sat</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="cucumber-sat">
+                                                </div>
+                                                <div class="daily-quantity">
+                                                    <label>Sun</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="cucumber-sun">
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="total-weekly" id="cucumber-total">0</span> kg</td>
+                                        <td><input type="number" class="form-control" min="0" step="0.01" placeholder="Optional" id="cucumber-propose"></td>
+                                        <td><button class="btn btn-primary" onclick="addToHedgeCart('Cucumber', getCurrentPrice('cucumber-price'), 'cucumber', 'cucumber-propose')">Add to Hedge Cart</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Carrots</td>
+                                        <td id="carrots-price">50.00</td>
+                                        <td>
+                                            <div class="daily-quantities">
+                                                <div class="daily-quantity">
+                                                    <label>Mon</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="carrots-mon">
+                                                </div>
+                                                <div class="daily-quantity">
+                                                    <label>Tue</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="carrots-tue">
+                                                </div>
+                                                <div class="daily-quantity">
+                                                    <label>Wed</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="carrots-wed">
+                                                </div>
+                                                <div class="daily-quantity">
+                                                    <label>Thu</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="carrots-thu">
+                                                </div>
+                                                <div class="daily-quantity">
+                                                    <label>Fri</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="carrots-fri">
+                                                </div>
+                                                <div class="daily-quantity">
+                                                    <label>Sat</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="carrots-sat">
+                                                </div>
+                                                <div class="daily-quantity">
+                                                    <label>Sun</label>
+                                                    <input type="number" class="form-control" min="0" step="1" id="carrots-sun">
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="total-weekly" id="carrots-total">0</span> kg</td>
+                                        <td><input type="number" class="form-control" min="0" step="0.01" placeholder="Optional" id="carrots-propose"></td>
+                                        <td><button class="btn btn-primary" onclick="addToHedgeCart('Carrots', getCurrentPrice('carrots-price'), 'carrots', 'carrots-propose')">Add to Hedge Cart</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="hedge-cart-link-section">
+            <div class="container text-center mt-4">
+                <a href="hedgekart.html" class="btn btn-lg btn-success">Go to Hedge Cart</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>About HELIOVA</h4>
+                    <p>We deliver fresh, quality food to your doorstep. Our mission is to provide healthy and nutritious food options for everyone.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="ordernow.html">Order Now</a></li>
+                        <li><a href="hedge.html">Hedging</a></li>
+                        <li><a href="membership.html">Membership</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Connect With Us</h4>
+                    <div class="social-links">
+                        <a href="https://instagram.com" target="_blank" class="text-light mx-2" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="https://facebook.com" target="_blank" class="text-light mx-2" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="https://twitter.com" target="_blank" class="text-light mx-2" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                    </div>
+                    <p class="mt-3">&copy; 2025 HELIOVA. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js folders/common.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function updateWeekDates() {
+            const startDate = new Date(document.getElementById('weekStart').value);
+            if (isNaN(startDate.getTime())) return;
+            
+            // Ensure the date is a Monday
+            const day = startDate.getDay();
+            const diff = startDate.getDate() - day + (day === 0 ? -6 : 1);
+            startDate.setDate(diff);
+            
+            // Update the input with the Monday date
+            document.getElementById('weekStart').value = startDate.toISOString().split('T')[0];
+        }
+
+        function calculateWeeklyTotal(prefix) {
+            const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+            let total = 0;
+            days.forEach(day => {
+                const qty = parseFloat(document.getElementById(`${prefix}-${day}`).value) || 0;
+                total += qty;
+            });
+            document.getElementById(`${prefix}-total`).textContent = total;
+            return total;
+        }
+
+        function addToHedgeCart(name, fixedPrice, prefix, proposeId) {
+            const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+            const quantities = {};
+            let totalQty = 0;
+            
+            days.forEach(day => {
+                const qty = parseFloat(document.getElementById(`${prefix}-${day}`).value) || 0;
+                quantities[day] = qty;
+                totalQty += qty;
+            });
+
+            if (totalQty <= 0) {
+                alert('Please enter quantities for at least one day.');
+                return;
+            }
+
+            const proposed = parseFloat(document.getElementById(proposeId).value);
+            let hedgeCart = JSON.parse(localStorage.getItem('hedgeCart')) || [];
+            
+            const existing = hedgeCart.find(item => item.name === name);
+            if (existing) {
+                existing.quantities = quantities;
+                existing.totalQty = totalQty;
+                existing.proposed = proposed || existing.proposed;
+            } else {
+                hedgeCart.push({
+                    name,
+                    fixedPrice,
+                    quantities,
+                    totalQty,
+                    proposed: proposed || null,
+                    weekStart: document.getElementById('weekStart').value
+                });
+            }
+            
+            localStorage.setItem('hedgeCart', JSON.stringify(hedgeCart));
+            alert(`${totalQty} kg of ${name} added to Hedge Cart for the week!`);
+            
+            // Clear inputs
+            days.forEach(day => {
+                document.getElementById(`${prefix}-${day}`).value = '';
+            });
+            document.getElementById(proposeId).value = '';
+            document.getElementById(`${prefix}-total`).textContent = '0';
+        }
+
+        function getCurrentPrice(priceId) {
+            return parseFloat(document.getElementById(priceId).textContent);
+        }
+        function updateRegionPrices() {
+            const region = document.getElementById('regionSelect').value;
+            // Prices for each region
+            const prices = {
+                bangalore:   {onions: 45, tomatoes: 35, potatoes: 30, capsicum: 70, corn: 55, cucumber: 40, carrots: 50},
+                chennai:     {onions: 40, tomatoes: 30, potatoes: 25, capsicum: 60, corn: 45, cucumber: 35, carrots: 40},
+                coimbatore:  {onions: 35, tomatoes: 25, potatoes: 20, capsicum: 50, corn: 35, cucumber: 30, carrots: 30}
+            };
+            const p = prices[region];
+            document.getElementById('onions-price').textContent = p.onions.toFixed(2);
+            document.getElementById('tomatoes-price').textContent = p.tomatoes.toFixed(2);
+            document.getElementById('potatoes-price').textContent = p.potatoes.toFixed(2);
+            document.getElementById('capsicum-price').textContent = p.capsicum.toFixed(2);
+            document.getElementById('corn-price').textContent = p.corn.toFixed(2);
+            document.getElementById('cucumber-price').textContent = p.cucumber.toFixed(2);
+            document.getElementById('carrots-price').textContent = p.carrots.toFixed(2);
+        }
+        // Set default region prices and initialize week selector on load
+        document.addEventListener('DOMContentLoaded', function() {
+            updateRegionPrices();
+            // Set default week start to next Monday
+            const today = new Date();
+            const nextMonday = new Date(today);
+            nextMonday.setDate(today.getDate() + (8 - today.getDay()) % 7);
+            document.getElementById('weekStart').value = nextMonday.toISOString().split('T')[0];
+        });
+    </script>
+</body>
+</html> 
